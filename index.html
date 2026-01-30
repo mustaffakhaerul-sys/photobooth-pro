@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Pro Photo Booth</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <h1>📸 PRO PHOTO BOOTH</h1>
+
+  <video id="video" autoplay playsinline></video>
+
+  <div class="controls">
+    <select id="timer">
+      <option value="3">Timer 3 detik</option>
+      <option value="5">Timer 5 detik</option>
+      <option value="10">Timer 10 detik</option>
+    </select>
+
+    <button id="start">MULAI FOTO</button>
+  </div>
+
+  <div id="countdown"></div>
+
+  <div class="frames">
+    <img src="frames/frame1.png" onclick="selectFrame(this.src)">
+    <img src="frames/frame2.png" onclick="selectFrame(this.src)">
+    <img src="frames/frame3.png" onclick="selectFrame(this.src)">
+  </div>
+
+  <canvas id="canvas" width="600" height="1800"></canvas>
+
+  <a id="download" download="photobooth.png">⬇ DOWNLOAD FOTO</a>
+
+</div>
+
+<audio id="shutter" src="sound/shutter.mp3"></audio>
+
+<script src="js/app.js"></script>
+</body>
+</html>
